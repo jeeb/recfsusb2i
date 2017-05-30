@@ -1,8 +1,8 @@
-CC	= gcc
-CFLAGS	= -DDEBUG -O2 -Wall
-OBJS	= main.o utils.o message.o osdepend.o usbdevfile.o usbops.o it9175.o it9175_usb.o tsthread.o
-LIBS	= -lpthread
-TARGET	= recfsusb2i
+CC	?= gcc
+CFLAGS	 = -DDEBUG -O2 -Wall
+OBJS	 = main.o utils.o message.o osdepend.o usbdevfile.o usbops.o it9175.o it9175_usb.o tsthread.o
+LIBS	 = -lpthread
+TARGET	 = recfsusb2i
 
 ifdef B25
 LIBS	+= $(shell pkg-config --libs aribb25)
