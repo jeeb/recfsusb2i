@@ -5,8 +5,8 @@ LIBS	= -lpthread
 TARGET	= recfsusb2i
 
 ifdef B25
-LIBS	+= -larib25
-CFLAGS_utils	+= -DSTD_B25
+LIBS	+= $(shell pkg-config --libs aribb25)
+CFLAGS_utils	+= -DSTD_B25 $(shell pkg-config --cflags aribb25)
 endif
 ifeq ($(shell getconf LONG_BIT),32)
 CFLAGS	+= -D_FILE_OFFSET_BITS=64
