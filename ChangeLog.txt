@@ -1,0 +1,48 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+# ChangeLog  recfsusb2i
+
+0.1.25	2016-02-20
+	Changed frequency boundaries for CATV bands  [it9175.c]
+
+
+0.1.7	2016-02-12
+	Changed the interval about print status, write TS data  [main.c]
+	Changed the TMCC data structure  [main.c/printTMCC(), it9175.c/it9175_readTMCC()]
+	Changed the TS buffer structure  [tsthread.c]
+
+
+0.1.0	2016-01-09
+	Added: support libarib25 (STD-B25 interface library)
+	Fixed a freq. expression (failed to set channel, >= UHF 39ch)  [it9175.c/it9175_set_params()]
+	Changed the TS buffer structure  [tsthread.c]
+	Reduced/Optimized the USB bulk transfer length (TS_BlockSize, TS_FrameSize)  [tsbuff.h]
+
+
+0.0.45	2015-12-30
+	Changed the TS buffer structure  [tsthread.c]
+	Fixed wrong values of guard interval on TMCC data   [main.c/printTMCC()]
+	Added: dump hex-values about configuration EEPROM when the EEPROM data is invalid  [it9175.c/it9175_read_config()]
+	Added: show the time spent in init, waitTuning, and waitStream  [main.c]
+	Reduced/Optimized the USB bulk transfer length (TS_BlockSize, TS_FrameSize) and the number of Async-IO requests (TS_MaxNumIO)  [tsbuff.h]
+	Stopped doing usb_reset  [it9175.c/it9175_create()]
+
+
+0.0.31	2015-12-25
+	first release
+
+
+## End
+signed by "trinity19683.gpg-pub" 2015-12-13
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBCAAGBQJWyB82AAoJEB0tpC02lUUYpjwH/2FmhMPXhs1EI12+Ncij8zhJ
+DQXjA8+fgQtsbva3lxG+z6t8YM4HhwqwJcuGDceZ4XpSbjba4KgeZwFfvNxa1SF5
+6OO7rLyBFDobafZoMUhYjbyVRzNG2pkEBHkPiGhXen3278o1eTPNNPAQPqbJvTYq
+AZF8K/pO7WRhPCQRkCO5JKBVsnT5oIzJ94tAkvwUlxC5COVen3hf87JVGGSMwuHL
+iC1TdIwZZ/bYQc6QFfaH+Qq3nYcUBz5eOaKeFySW6K+R/Q9zSZniUrX1iygYDxrN
+Wm2wweqd7rh9+tSfISjlLapLhY+237TYlAIwAZYOBDksXXg6bJKHN6FzPSAHzdk=
+=n4li
+-----END PGP SIGNATURE-----

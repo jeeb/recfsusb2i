@@ -1,0 +1,13 @@
+main.o: main.c usbdevfile.h types_u.h it9175.h tsthread.h utils.h \
+ verstr.h message.h
+utils.o: utils.c utils.h message.h
+message.o: message.c message.h
+osdepend.o: osdepend.c osdepend.h types_u.h
+usbdevfile.o: usbdevfile.c usbdevfile.h types_u.h message.h
+usbops.o: usbops.c usbops.h types_u.h message.h
+it9175.o: it9175.c usbops.h types_u.h osdepend.h it9175.h tsbuff.h \
+ it9175_usb.h it9175_priv.h message.h it9175_fw.h
+it9175_usb.o: it9175_usb.c osdepend.h types_u.h it9175_usb.h \
+ it9175_priv.h message.h
+tsthread.o: tsthread.c usbops.h types_u.h osdepend.h tsbuff.h tsthread.h \
+ message.h
