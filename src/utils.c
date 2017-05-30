@@ -230,8 +230,8 @@ struct OutputBuffer* create_FileBufferedWriter(unsigned  bufSize, const char* co
 }
 
 #ifdef STD_B25
-#include <arib25/arib_std_b25.h>
-#include <arib25/b_cas_card.h>
+#include <aribb25/arib_std_b25.h>
+#include <aribb25/b_cas_card.h>
 #endif
 
 #define TS_PACKET_SIZE  188
